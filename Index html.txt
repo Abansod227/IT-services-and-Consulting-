@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>IT Services and Consulting</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+background-color: #f4f4f4;
+}
+
+header {
+background: #0a3d62;
+color: white;
+padding: 20px;
+text-align: center;
+}
+
+nav {
+background: #1e3799;
+padding: 10px;
+text-align: center;
+}
+
+nav a {
+color: white;
+margin: 15px;
+text-decoration: none;
+font-weight: bold;
+}
+
+section {
+padding: 40px;
+text-align: center;
+}
+
+.services {
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.card {
+background: white;
+padding: 20px;
+border-radius: 8px;
+width: 250px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+footer {
+background: #0a3d62;
+color: white;
+text-align: center;
+padding: 15px;
+margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>IT Services and Consulting</h1>
+<p>Reliable IT Support for Your Business</p>
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</nav>
+
+<section>
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Desktop Support</h3>
+<p>Installation, troubleshooting, and maintenance of desktop systems.</p>
+</div>
+
+<div class="card">
+<h3>Network Setup</h3>
+<p>LAN, WiFi setup and network troubleshooting for offices.</p>
+</div>
+
+<div class="card">
+<h3>VPN Configuration</h3>
+<p>Secure VPN setup and remote access solutions.</p>
+</div>
+
+<div class="card">
+<h3>Linux Support</h3>
+<p>Server management and Linux system administration.</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Contact Us</h2>
+<p>Email: support@itservices.com</p>
+<p>Phone: +91 XXXXX XXXXX</p>
+</section>
+
+<footer>
+<p>© 2026 IT Services and Consulting | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
