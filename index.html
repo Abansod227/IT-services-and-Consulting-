@@ -8,7 +8,6 @@
 <title>Infinity IT Services & Consulting</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 <style>
@@ -49,7 +48,6 @@ backdrop-filter:blur(10px);
 
 .logo{
 width:70px;
-height:auto;
 }
 
 /* Navbar */
@@ -57,7 +55,7 @@ height:auto;
 nav{
 text-align:center;
 padding:12px;
-background:rgba(15,23,42,0.8);
+background:#0f172a;
 }
 
 nav a{
@@ -65,7 +63,6 @@ color:white;
 margin:15px;
 text-decoration:none;
 font-weight:bold;
-transition:0.3s;
 }
 
 nav a:hover{
@@ -75,64 +72,41 @@ color:#38bdf8;
 /* Hero */
 
 .hero{
-height:75vh;
+height:70vh;
 display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:20px;
 }
 
 .hero h1{
-font-size:50px;
+font-size:48px;
 background:linear-gradient(#38bdf8,#a78bfa);
 -webkit-background-clip:text;
 color:transparent;
 }
 
-.typing{
-font-size:20px;
+.hero p{
 margin-top:10px;
-border-right:3px solid white;
-white-space:nowrap;
-overflow:hidden;
-width:0;
-animation:typing 6s steps(40,end) infinite alternate;
-}
-
-@keyframes typing{
-from{width:0}
-to{width:420px}
+font-size:18px;
 }
 
 .hero button{
 margin-top:25px;
 padding:12px 30px;
 border:none;
-border-radius:30px;
+border-radius:25px;
 background:#2563eb;
 color:white;
-font-size:16px;
 cursor:pointer;
-transition:0.3s;
-}
-
-.hero button:hover{
-background:#1d4ed8;
-transform:scale(1.05);
 }
 
 /* Services */
 
 .services{
-padding:90px 20px;
+padding:80px 20px;
 text-align:center;
-}
-
-.services h2{
-font-size:34px;
-margin-bottom:40px;
 }
 
 .service-container{
@@ -147,20 +121,61 @@ background:rgba(255,255,255,0.05);
 width:260px;
 padding:30px;
 border-radius:15px;
-backdrop-filter:blur(15px);
-box-shadow:0 0 30px rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
 transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-15px);
-box-shadow:0 0 40px rgba(56,189,248,0.7);
+transform:translateY(-10px);
+box-shadow:0 0 30px #38bdf8;
 }
 
 .card i{
-font-size:42px;
+font-size:40px;
 color:#38bdf8;
-margin-bottom:12px;
+margin-bottom:10px;
+}
+
+/* Tech Logos */
+
+.tech{
+padding:70px 20px;
+text-align:center;
+}
+
+.tech img{
+width:80px;
+margin:20px;
+filter:grayscale(100%);
+transition:0.3s;
+}
+
+.tech img:hover{
+filter:grayscale(0%);
+transform:scale(1.1);
+}
+
+/* Stats */
+
+.stats{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+padding:70px 20px;
+background:#020617;
+text-align:center;
+}
+
+.stat{
+font-size:30px;
+font-weight:bold;
+}
+
+.stat span{
+display:block;
+font-size:15px;
+font-weight:normal;
 }
 
 /* About */
@@ -168,41 +183,31 @@ margin-bottom:12px;
 .about{
 padding:80px 20px;
 text-align:center;
-}
-
-.about p{
-max-width:700px;
+max-width:800px;
 margin:auto;
 line-height:1.6;
-opacity:0.9;
 }
 
 /* Contact */
 
 .contact{
-padding:80px 20px;
+padding:70px 20px;
 text-align:center;
 }
 
 .contact-box{
-background:rgba(255,255,255,0.08);
+background:rgba(255,255,255,0.05);
 display:inline-block;
 padding:25px;
 margin:15px;
-border-radius:12px;
-backdrop-filter:blur(10px);
-transition:0.3s;
-}
-
-.contact-box:hover{
-transform:scale(1.05);
+border-radius:10px;
 }
 
 /* Footer */
 
 footer{
 background:black;
-padding:20px;
+padding:25px;
 text-align:center;
 font-size:14px;
 }
@@ -219,11 +224,9 @@ font-size:30px;
 padding:15px;
 border-radius:50%;
 text-decoration:none;
-box-shadow:0 5px 20px rgba(0,0,0,0.4);
 }
 
 </style>
-
 </head>
 
 <body>
@@ -249,13 +252,10 @@ box-shadow:0 5px 20px rgba(0,0,0,0.4);
 
 <section class="hero">
 
-<h1>Infinity IT Services</h1>
+<h1>Smart IT Solutions for Modern Business</h1>
+<p>Networking | Cyber Security | Linux | Cloud | IT Support</p>
 
-<div class="typing">
-Networking • Cyber Security • Linux • Cloud • IT Support
-</div>
-
-<button onclick="location.href='#contact'">Get IT Support</button>
+<button onclick="location.href='#contact'">Get Support</button>
 
 </section>
 
@@ -268,40 +268,59 @@ Networking • Cyber Security • Linux • Cloud • IT Support
 <div class="card">
 <i class="fa-solid fa-desktop"></i>
 <h3>Desktop Support</h3>
-<p>System troubleshooting & installation.</p>
+<p>Installation and troubleshooting.</p>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-network-wired"></i>
 <h3>Network Setup</h3>
-<p>LAN, WiFi and enterprise networking.</p>
+<p>LAN & enterprise networking.</p>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-shield-halved"></i>
 <h3>Cyber Security</h3>
-<p>Firewall, VPN and endpoint protection.</p>
+<p>Firewall and VPN security.</p>
 </div>
 
 <div class="card">
 <i class="fa-brands fa-linux"></i>
 <h3>Linux Servers</h3>
-<p>Linux administration & server security.</p>
+<p>Linux server administration.</p>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-cloud"></i>
 <h3>Cloud Solutions</h3>
-<p>AWS, Azure & infrastructure deployment.</p>
+<p>AWS & Azure infrastructure.</p>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-screwdriver-wrench"></i>
 <h3>IT Consulting</h3>
-<p>Professional IT planning and strategy.</p>
+<p>Professional IT strategy.</p>
 </div>
 
 </div>
+
+</section>
+
+<section class="tech">
+
+<h2>Technologies We Work With</h2>
+
+<img src="https://cdn-icons-png.flaticon.com/512/732/732212.png">
+<img src="https://cdn-icons-png.flaticon.com/512/226/226777.png">
+<img src="https://cdn-icons-png.flaticon.com/512/919/919853.png">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png">
+
+</section>
+
+<section class="stats">
+
+<div class="stat">120+<span>Projects Completed</span></div>
+<div class="stat">80+<span>Happy Clients</span></div>
+<div class="stat">24/7<span>Support</span></div>
 
 </section>
 
@@ -310,9 +329,9 @@ Networking • Cyber Security • Linux • Cloud • IT Support
 <h2>About Infinity IT</h2>
 
 <p>
-Infinity IT Services & Consulting delivers reliable technology solutions for businesses.
-Our expertise includes networking, cybersecurity, Linux infrastructure, VPN solutions,
-and cloud environments.
+Infinity IT Services & Consulting provides professional technology
+solutions for businesses including networking, cybersecurity,
+Linux servers and cloud infrastructure.
 </p>
 
 </section>
