@@ -11,15 +11,20 @@
 
 <style>
 
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial;
-background:#0f172a;
-color:#333;
+}
+
+body{
+background:#020617;
+color:white;
 overflow-x:hidden;
 }
 
-/* 3D Animated Background */
+/* Animated Background */
 
 body::before{
 content:"";
@@ -28,13 +33,14 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:linear-gradient(120deg,#2563eb,#0ea5e9,#7c3aed,#06b6d4);
+background:linear-gradient(120deg,#2563eb,#06b6d4,#7c3aed,#0ea5e9);
 background-size:400% 400%;
-animation:gradientBG 15s ease infinite;
+animation:bgMove 18s infinite;
 z-index:-1;
+opacity:0.3;
 }
 
-@keyframes gradientBG{
+@keyframes bgMove{
 0%{background-position:0% 50%;}
 50%{background-position:100% 50%;}
 100%{background-position:0% 50%;}
@@ -43,24 +49,25 @@ z-index:-1;
 /* Header */
 
 header{
-background:rgba(15,23,42,0.8);
-backdrop-filter:blur(10px);
-color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:15px;
 padding:20px;
-text-align:center;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
 }
 
 .logo{
-width:80px;
-margin-bottom:10px;
+width:55px;
 }
 
 /* Navbar */
 
 nav{
-background:rgba(30,41,59,0.9);
-padding:12px;
 text-align:center;
+padding:12px;
+background:rgba(15,23,42,0.8);
 }
 
 nav a{
@@ -75,66 +82,117 @@ nav a:hover{
 color:#38bdf8;
 }
 
+/* Hero Section */
+
+.hero{
+height:70vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:50px;
+background:linear-gradient(#38bdf8,#a78bfa);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.hero p{
+margin-top:10px;
+font-size:18px;
+opacity:0.9;
+}
+
+.hero button{
+margin-top:25px;
+padding:12px 25px;
+border:none;
+border-radius:30px;
+background:#2563eb;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero button:hover{
+transform:scale(1.05);
+background:#1d4ed8;
+}
+
 /* Services */
 
 .services{
-padding:60px 20px;
+padding:80px 20px;
 text-align:center;
-color:white;
+}
+
+.services h2{
+font-size:32px;
+margin-bottom:40px;
 }
 
 .service-container{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:25px;
+gap:30px;
 }
 
-/* 3D Card */
-
 .card{
-background:rgba(255,255,255,0.08);
+background:rgba(255,255,255,0.05);
 width:260px;
 padding:30px;
 border-radius:15px;
 backdrop-filter:blur(10px);
-box-shadow:0 10px 25px rgba(0,0,0,0.3);
-transition:transform 0.4s, box-shadow 0.4s;
+transition:0.4s;
+box-shadow:0 0 25px rgba(0,0,0,0.4);
 }
 
 .card:hover{
-transform:translateY(-10px) rotateX(5deg) rotateY(5deg);
-box-shadow:0 20px 40px rgba(0,0,0,0.5);
+transform:translateY(-12px) rotateX(6deg);
+box-shadow:0 0 40px rgba(56,189,248,0.6);
 }
 
 .card i{
-font-size:40px;
+font-size:42px;
 color:#38bdf8;
-margin-bottom:10px;
+margin-bottom:12px;
 }
 
 /* About */
 
 .about{
-background:rgba(241,245,249,0.9);
-padding:60px 20px;
+padding:80px 20px;
 text-align:center;
+background:#020617;
+}
+
+.about p{
+max-width:700px;
+margin:auto;
+opacity:0.9;
+line-height:1.6;
 }
 
 /* Contact */
 
 .contact{
-padding:60px 20px;
+padding:80px 20px;
 text-align:center;
 }
 
 .contact-box{
-background:white;
+background:rgba(255,255,255,0.08);
 display:inline-block;
 padding:25px;
-margin:10px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
+margin:15px;
+border-radius:12px;
+backdrop-filter:blur(10px);
 transition:0.3s;
 }
 
@@ -145,13 +203,13 @@ transform:scale(1.05);
 /* Footer */
 
 footer{
-background:#0f172a;
-color:white;
-text-align:center;
+background:black;
 padding:20px;
+text-align:center;
+font-size:14px;
 }
 
-/* WhatsApp */
+/* WhatsApp Button */
 
 .whatsapp{
 position:fixed;
@@ -163,7 +221,7 @@ font-size:30px;
 padding:15px;
 border-radius:50%;
 text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,0.4);
+box-shadow:0 5px 20px rgba(0,0,0,0.4);
 }
 
 </style>
@@ -176,17 +234,28 @@ box-shadow:0 5px 15px rgba(0,0,0,0.4);
 
 <img src="logo.png" class="logo">
 
-<h2>Infinity IT Services & Consulting</h2>
-<p>Professional IT Support & Technology Solutions</p>
+<h2>Infinity IT Services</h2>
 
 </header>
 
 <nav>
+
 <a href="#">Home</a>
 <a href="#services">Services</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
+
 </nav>
+
+<section class="hero">
+
+<h1>Infinity IT Services & Consulting</h1>
+
+<p>Networking | Cyber Security | Linux | Cloud | IT Support</p>
+
+<button onclick="location.href='#contact'">Contact Us</button>
+
+</section>
 
 <section id="services" class="services">
 
@@ -197,37 +266,37 @@ box-shadow:0 5px 15px rgba(0,0,0,0.4);
 <div class="card">
 <i class="fa-solid fa-desktop"></i>
 <h3>Desktop Support</h3>
-<p>Installation, troubleshooting and maintenance of systems.</p>
+<p>System installation, troubleshooting and maintenance.</p>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-network-wired"></i>
 <h3>Network Setup</h3>
-<p>Office LAN, WiFi and infrastructure setup.</p>
+<p>LAN, WiFi and infrastructure deployment.</p>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-shield-halved"></i>
-<h3>VPN Setup</h3>
-<p>Secure remote access configuration for businesses.</p>
+<h3>Cyber Security</h3>
+<p>Firewall, VPN and security monitoring.</p>
 </div>
 
 <div class="card">
 <i class="fa-brands fa-linux"></i>
 <h3>Linux Administration</h3>
-<p>Linux server management and maintenance.</p>
+<p>Server configuration and management.</p>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-cloud"></i>
 <h3>Cloud Solutions</h3>
-<p>Cloud infrastructure deployment and management.</p>
+<p>AWS, Azure and cloud infrastructure.</p>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-screwdriver-wrench"></i>
 <h3>IT Consulting</h3>
-<p>Professional guidance for IT infrastructure and planning.</p>
+<p>Professional IT infrastructure planning.</p>
 </div>
 
 </div>
@@ -236,12 +305,12 @@ box-shadow:0 5px 15px rgba(0,0,0,0.4);
 
 <section id="about" class="about">
 
-<h2>About Us</h2>
+<h2>About Infinity IT</h2>
 
 <p>
-Infinity IT Services & Consulting provides professional IT support for businesses and individuals.
-We specialize in networking, system administration, VPN setup, Linux servers, and cloud solutions.
-Our goal is to provide reliable and secure IT infrastructure for your organization.
+Infinity IT Services & Consulting provides professional technology solutions for businesses.
+We specialize in networking, cyber security, Linux servers, VPN setup, and cloud infrastructure.
+Our mission is to build secure and scalable IT environments.
 </p>
 
 </section>
@@ -251,17 +320,13 @@ Our goal is to provide reliable and secure IT infrastructure for your organizati
 <h2>Contact Us</h2>
 
 <div class="contact-box">
-
 <h3>Rupesh Agrawal</h3>
-<p>Phone: 8530464884</p>
-
+<p>📞 8530464884</p>
 </div>
 
 <div class="contact-box">
-
 <h3>Abhijeet Bansod</h3>
-<p>Phone: 9112420687</p>
-
+<p>📞 9112420687</p>
 </div>
 
 </section>
@@ -273,7 +338,9 @@ Our goal is to provide reliable and secure IT infrastructure for your organizati
 </footer>
 
 <a class="whatsapp" href="https://wa.me/918530464884" target="_blank">
+
 <i class="fa-brands fa-whatsapp"></i>
+
 </a>
 
 </body>
