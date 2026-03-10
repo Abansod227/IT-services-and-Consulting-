@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -19,44 +20,25 @@ color:white;
 
 header{
 background:#020617;
-padding:20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+padding:25px;
+text-align:center;
 }
 
-header h2{
-margin:0;
-color:#38bdf8;
+nav{
+background:#020617;
+padding:12px;
+text-align:center;
 }
 
 nav a{
 color:white;
 margin:15px;
 text-decoration:none;
-}
-
-.hero{
-text-align:center;
-padding:120px 20px;
-background:linear-gradient(120deg,#020617,#1e3a8a);
-}
-
-.hero h1{
-font-size:50px;
-}
-
-.hero button{
-padding:12px 25px;
-background:#38bdf8;
-border:none;
-color:black;
 font-weight:bold;
-cursor:pointer;
 }
 
 .services{
-padding:60px;
+padding:60px 20px;
 text-align:center;
 }
 
@@ -70,7 +52,7 @@ gap:25px;
 .card{
 background:#111827;
 width:260px;
-padding:25px;
+padding:30px;
 border-radius:10px;
 border:1px solid #1f2937;
 }
@@ -78,23 +60,33 @@ border:1px solid #1f2937;
 .card i{
 font-size:40px;
 color:#38bdf8;
+margin-bottom:10px;
 }
 
 .about{
-padding:60px;
-text-align:center;
 background:#020617;
+padding:60px 20px;
+text-align:center;
 }
 
 .contact{
-padding:60px;
+padding:60px 20px;
 text-align:center;
+}
+
+.contact-box{
+background:#111827;
+display:inline-block;
+padding:25px;
+margin:10px;
+border-radius:10px;
+border:1px solid #1f2937;
 }
 
 footer{
 background:#020617;
-padding:20px;
 text-align:center;
+padding:20px;
 }
 
 .whatsapp{
@@ -103,7 +95,7 @@ bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-font-size:28px;
+font-size:30px;
 padding:15px;
 border-radius:50%;
 text-decoration:none;
@@ -116,8 +108,9 @@ text-decoration:none;
 <body>
 
 <header>
-
 <h2>Infinity IT Services & Consulting</h2>
+<p>Professional IT Support & Technology Solutions</p>
+</header>
 
 <nav>
 <a href="#">Home</a>
@@ -126,52 +119,46 @@ text-decoration:none;
 <a href="#contact">Contact</a>
 </nav>
 
-</header>
-
-<section class="hero">
-
-<h1>Reliable IT Solutions</h1>
-
-<p>Desktop Support | Networking | VPN | Linux | Server Support</p>
-
-<button>Get IT Support</button>
-
-</section>
-
 <section id="services" class="services">
 
-<h2>Our IT Services</h2>
+<h2>Our Services</h2>
 
 <div class="service-container">
 
 <div class="card">
 <i class="fa-solid fa-desktop"></i>
 <h3>Desktop Support</h3>
-<p>Installation, troubleshooting and maintenance of desktop systems.</p>
+<p>Installation, troubleshooting and maintenance of systems.</p>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-network-wired"></i>
 <h3>Network Setup</h3>
-<p>Office LAN, WiFi configuration and network troubleshooting.</p>
+<p>Office LAN, WiFi and infrastructure setup.</p>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-shield-halved"></i>
-<h3>VPN Configuration</h3>
-<p>Secure VPN setup for remote office access.</p>
+<h3>VPN Setup</h3>
+<p>Secure remote access configuration for businesses.</p>
 </div>
 
 <div class="card">
 <i class="fa-brands fa-linux"></i>
-<h3>Linux Support</h3>
-<p>Linux server installation, configuration and support.</p>
+<h3>Linux Administration</h3>
+<p>Linux server management and maintenance.</p>
 </div>
 
 <div class="card">
-<i class="fa-solid fa-server"></i>
-<h3>Server Management</h3>
-<p>Server setup, monitoring and troubleshooting.</p>
+<i class="fa-solid fa-cloud"></i>
+<h3>Cloud Solutions</h3>
+<p>Cloud infrastructure deployment and management.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-screwdriver-wrench"></i>
+<h3>IT Consulting</h3>
+<p>Professional guidance for IT infrastructure and planning.</p>
 </div>
 
 </div>
@@ -183,22 +170,26 @@ text-decoration:none;
 <h2>About Us</h2>
 
 <p>
-Infinity IT Services & Consulting provides professional IT support and infrastructure solutions 
-for businesses. We specialize in desktop support, networking, VPN setup, Linux systems and 
-server management to ensure smooth IT operations.
+Infinity IT Services & Consulting provides professional IT support for businesses and individuals.
+We specialize in networking, system administration, VPN setup, Linux servers, and cloud solutions.
+Our goal is to provide reliable and secure IT infrastructure for your organization.
 </p>
 
 </section>
 
 <section id="contact" class="contact">
 
-<h2>Contact Information</h2>
+<h2>Contact Us</h2>
 
-<p><b>Contact Person:</b> Abhijeet Bansod , Rupesh Agrawal</p>
+<div class="contact-box">
+<h3>Rupesh Agrawal</h3>
+<p>Phone: 8530464884</p>
+</div>
 
-<p><b>Phone:</b> 9112420687 | 8530464884</p>
-
-<p><b>WhatsApp:</b> 9112420687</p>
+<div class="contact-box">
+<h3>Abhijeet Bansod</h3>
+<p>Phone: 9112420687</p>
+</div>
 
 </section>
 
@@ -208,7 +199,7 @@ server management to ensure smooth IT operations.
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/919112420687" target="_blank">
+<a class="whatsapp" href="https://wa.me/918530464884" target="_blank">
 <i class="fa-brands fa-whatsapp"></i>
 </a>
 
