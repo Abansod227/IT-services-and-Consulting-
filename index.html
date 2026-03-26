@@ -1,360 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Infinity IT Services & Consulting</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body{
-background:#020617;
-color:white;
-overflow-x:hidden;
-}
-
-/* Particle Background */
-
-#particles-js{
-position:fixed;
-width:100%;
-height:100%;
-z-index:-1;
-}
-
-/* Header */
-
-header{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:15px;
-padding:18px;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
-}
-
-.logo{
-width:70px;
-height:auto;
+  background:#0b0f1a;
+  color:white;
 }
 
 /* Navbar */
-
 nav{
-text-align:center;
-padding:12px;
-background:rgba(15,23,42,0.8);
+  display:flex;
+  justify-content:space-between;
+  padding:20px 60px;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  position:fixed;
+  width:100%;
 }
 
-nav a{
-color:white;
-margin:15px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
+nav h1{
+  color:#00eaff;
 }
 
-nav a:hover{
-color:#38bdf8;
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:30px;
+}
+
+nav ul li{
+  cursor:pointer;
 }
 
 /* Hero */
-
 .hero{
-height:75vh;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:20px;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:linear-gradient(135deg,#0b0f1a,#121a2f);
 }
 
 .hero h1{
-font-size:50px;
-background:linear-gradient(#38bdf8,#a78bfa);
--webkit-background-clip:text;
-color:transparent;
+  font-size:60px;
+  color:#00eaff;
 }
 
-.typing{
-font-size:20px;
-margin-top:10px;
-border-right:3px solid white;
-white-space:nowrap;
-overflow:hidden;
-width:0;
-animation:typing 6s steps(40,end) infinite alternate;
+.hero p{
+  margin-top:20px;
+  font-size:18px;
+  color:#ccc;
 }
 
-@keyframes typing{
-from{width:0}
-to{width:420px}
-}
-
-.hero button{
-margin-top:25px;
-padding:12px 30px;
-border:none;
-border-radius:30px;
-background:#2563eb;
-color:white;
-font-size:16px;
-cursor:pointer;
-transition:0.3s;
-}
-
-.hero button:hover{
-background:#1d4ed8;
-transform:scale(1.05);
+.btn{
+  margin-top:30px;
+  padding:12px 30px;
+  background:#00eaff;
+  border:none;
+  color:black;
+  cursor:pointer;
+  border-radius:5px;
 }
 
 /* Services */
-
 .services{
-padding:90px 20px;
-text-align:center;
+  padding:80px 60px;
 }
 
 .services h2{
-font-size:34px;
-margin-bottom:40px;
+  text-align:center;
+  margin-bottom:50px;
 }
 
-.service-container{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:30px;
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
 }
 
 .card{
-background:rgba(255,255,255,0.05);
-width:260px;
-padding:30px;
-border-radius:15px;
-backdrop-filter:blur(15px);
-box-shadow:0 0 30px rgba(0,0,0,0.5);
-transition:0.4s;
+  background:#121a2f;
+  padding:30px;
+  border-radius:10px;
+  transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-15px);
-box-shadow:0 0 40px rgba(56,189,248,0.7);
-}
-
-.card i{
-font-size:42px;
-color:#38bdf8;
-margin-bottom:12px;
-}
-
-/* About */
-
-.about{
-padding:80px 20px;
-text-align:center;
-}
-
-.about p{
-max-width:700px;
-margin:auto;
-line-height:1.6;
-opacity:0.9;
-}
-
-/* Contact */
-
-.contact{
-padding:80px 20px;
-text-align:center;
-}
-
-.contact-box{
-background:rgba(255,255,255,0.08);
-display:inline-block;
-padding:25px;
-margin:15px;
-border-radius:12px;
-backdrop-filter:blur(10px);
-transition:0.3s;
-}
-
-.contact-box:hover{
-transform:scale(1.05);
+  transform:translateY(-10px);
+  background:#1b2540;
 }
 
 /* Footer */
-
 footer{
-background:black;
-padding:20px;
-text-align:center;
-font-size:14px;
+  text-align:center;
+  padding:20px;
+  background:#000;
+  margin-top:50px;
 }
-
-/* WhatsApp */
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-font-size:30px;
-padding:15px;
-border-radius:50%;
-text-decoration:none;
-box-shadow:0 5px 20px rgba(0,0,0,0.4);
-}
-
 </style>
 
 </head>
 
 <body>
 
-<div id="particles-js"></div>
-
-<header>
-
-<img src="logo.png" class="logo">
-
-<h2>Infinity IT Services & Consulting</h2>
-
-</header>
-
 <nav>
-
-<a href="#">Home</a>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-
+  <h1>Infinity IT</h1>
+  <ul>
+    <li>Home</li>
+    <li>Services</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
 </nav>
 
 <section class="hero">
-
-<h1>Infinity IT Services</h1>
-
-<div class="typing">
-Networking • Cyber Security • Linux • Cloud • IT Support
-</div>
-
-<button onclick="location.href='#contact'">Get IT Support</button>
-
+  <div>
+    <h1>Infinity IT Services & Consulting</h1>
+    <p>Empowering businesses with Cloud, Security & Digital Transformation</p>
+    <button class="btn">Get Started</button>
+  </div>
 </section>
 
-<section id="services" class="services">
+<section class="services">
+  <h2>Our Services</h2>
+  <div class="cards">
+    
+    <div class="card">
+      <h3>Cloud Solutions</h3>
+      <p>Scalable cloud infrastructure for modern businesses.</p>
+    </div>
 
-<h2>Our Services</h2>
+    <div class="card">
+      <h3>Cyber Security</h3>
+      <p>Advanced protection against evolving threats.</p>
+    </div>
 
-<div class="service-container">
+    <div class="card">
+      <h3>IT Consulting</h3>
+      <p>Strategic IT planning to boost growth.</p>
+    </div>
 
-<div class="card">
-<i class="fa-solid fa-desktop"></i>
-<h3>Desktop Support</h3>
-<p>System troubleshooting & installation.</p>
-</div>
+    <div class="card">
+      <h3>Networking</h3>
+      <p>Reliable and secure network solutions.</p>
+    </div>
 
-<div class="card">
-<i class="fa-solid fa-network-wired"></i>
-<h3>Network Setup</h3>
-<p>LAN, WiFi and enterprise networking.</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-shield-halved"></i>
-<h3>Cyber Security</h3>
-<p>Firewall, VPN and endpoint protection.</p>
-</div>
-
-<div class="card">
-<i class="fa-brands fa-linux"></i>
-<h3>Linux Servers</h3>
-<p>Linux administration & server security.</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-cloud"></i>
-<h3>Cloud Solutions</h3>
-<p>AWS, Azure & infrastructure deployment.</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-screwdriver-wrench"></i>
-<h3>IT Consulting</h3>
-<p>Professional IT planning and strategy.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="about" class="about">
-
-<h2>About Infinity IT</h2>
-
-<p>
-Infinity IT Services & Consulting delivers reliable technology solutions for businesses.
-Our expertise includes networking, cybersecurity, Linux infrastructure, VPN solutions,
-and cloud environments.
-</p>
-
-</section>
-
-<section id="contact" class="contact">
-
-<h2>Contact Us</h2>
-
-<div class="contact-box">
-<h3>Rupesh Agrawal</h3>
-<p>📞 8530464884</p>
-</div>
-
-<div class="contact-box">
-<h3>Abhijeet Bansod</h3>
-<p>📞 9112420687</p>
-</div>
-
+  </div>
 </section>
 
 <footer>
-
-<p>© 2026 Infinity IT Services & Consulting</p>
-
+  <p>© 2026 Infinity IT Services & Consulting</p>
 </footer>
-
-<a class="whatsapp" href="https://wa.me/918530464884" target="_blank">
-<i class="fa-brands fa-whatsapp"></i>
-</a>
-
-<script>
-
-particlesJS("particles-js", {
-particles:{
-number:{value:80},
-size:{value:3},
-move:{speed:2},
-line_linked:{enable:true}
-}
-});
-
-</script>
 
 </body>
 </html>
